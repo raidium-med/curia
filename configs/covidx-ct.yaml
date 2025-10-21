@@ -11,5 +11,5 @@ learning_rate: 0.0002
 num_workers: 8
 eval_steps: 200
 
-output_dir: "./results/covicx-ct"
+output_dir: "./results/covidx-ct"
 
