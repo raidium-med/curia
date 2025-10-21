@@ -194,7 +194,7 @@ def preprocess_function(examples, processor, is_regression):
     return batch
 
 
-def instanciate_model_and_dataset(
+def instantiate_model_and_dataset(
     config, is_regression, train_dataset, val_dataset, test_dataset
 ):
     model_cfg = OmegaConf.to_container(config.model, resolve=True)
@@ -344,7 +344,7 @@ def extract_features(examples, processor, backbone, config, is_regression):
     return batch
 
 
-def instanciate_cache_model_and_dataset(
+def instantiate_cache_model_and_dataset(
     config, is_regression, train_dataset, val_dataset, test_dataset
 ):
     backbone = Dinov2Model.from_pretrained(config.model.model_name)
@@ -422,12 +422,12 @@ def main(config):
     use_feature_caching = OmegaConf.select(config, "use_feature_caching")
     if use_feature_caching:
         model, train_dataset, val_dataset, test_dataset = (
-            instanciate_cache_model_and_dataset(
+            instantiate_cache_model_and_dataset(
                 config, is_regression, train_dataset, val_dataset, test_dataset
             )
         )
     else:
-        model, train_dataset, val_dataset, test_dataset = instanciate_model_and_dataset(
+        model, train_dataset, val_dataset, test_dataset = instantiate_model_and_dataset(
             config, is_regression, train_dataset, val_dataset, test_dataset
         )
 
