@@ -1,0 +1,16 @@
+model:
+  model_name: "raidium/curia"
+  num_classes: 1
+
+dataset_name: "raidium/CuriaBench"
+dataset_config: "ixi"
+
+use_feature_caching: true
+epochs: 1500
+batch_size: 64
+learning_rate: 0.002
+num_workers: 8
+eval_steps: 200
+regression: true
+
+output_dir: "./results/ixi"

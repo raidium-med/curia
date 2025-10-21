@@ -1,0 +1,16 @@
+model:
+  model_name: "raidium/curia"
+  num_classes: 8
+
+dataset_name: "raidium/CuriaBench"
+dataset_config: "deep-lesion-site"
+
+epochs: 50
+batch_size: 64
+learning_rate: 0.0005
+num_workers: 8
+eval_steps: 30
+
+output_dir: "./results/deep-lesion-site"
+
+
