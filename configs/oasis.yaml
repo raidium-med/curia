@@ -1,0 +1,23 @@
+# model_name: "raidium/curia"
+
+dataset_name: "raidium/CuriaBench"
+dataset_config: "oasis"
+
+epochs: 50
+batch_size: 16
+learning_rate: 0.02
+num_workers: 8
+eval_steps: 30
+
+output_dir: "./results/oasis"
+
+use_feature_caching: true
+model:
+  model_name: "raidium/curia"
+  num_classes: 2
+  use_avgpool_per_slice: false
+  use_avgpool_on_the_volume: true
+  use_class_token: false
+  num_slices: null
+  kernel_size: null
+  use_n_blocks: 1

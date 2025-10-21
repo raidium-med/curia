@@ -1,0 +1,15 @@
+model:
+  model_name: "raidium/curia"
+  num_classes: 3
+
+dataset_name: "raidium/CuriaBench"
+dataset_config: "covidx-ct"
+
+epochs: 20
+batch_size: 64
+learning_rate: 0.0002
+num_workers: 8
+eval_steps: 200
+
+output_dir: "./results/covidx-ct"
+

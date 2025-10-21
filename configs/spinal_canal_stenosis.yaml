@@ -1,0 +1,14 @@
+model:
+  model_name: "raidium/curia"
+  num_classes: 3
+
+dataset_name: "raidium/CuriaBench"
+dataset_config: "spinal_canal_stenosis"
+
+epochs: 50
+batch_size: 64
+learning_rate: 0.005
+num_workers: 8
+eval_steps: 30
+
+output_dir: "./results/spinal_canal_stenosis"

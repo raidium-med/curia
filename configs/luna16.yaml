@@ -1,0 +1,16 @@
+model:
+  model_name: "raidium/curia"
+  num_classes: 2
+
+dataset_name: "raidium/CuriaBench"
+dataset_config: "luna16"
+
+use_feature_caching: true
+epochs: 50
+batch_size: 64
+learning_rate: 0.002
+num_workers: 8
+eval_steps: 30
+
+output_dir: "./results/luna16"
+

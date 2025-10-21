@@ -1,0 +1,14 @@
+model:
+  model_name: "raidium/curia"
+  num_classes: 3
+
+dataset_name: "raidium/CuriaBench"
+dataset_config: "subarticular_stenosis"
+
+epochs: 25
+batch_size: 64
+learning_rate: 0.01
+num_workers: 8
+eval_steps: 30
+
+output_dir: "./results/subarticular_stenosis"
