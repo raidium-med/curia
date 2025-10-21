@@ -89,7 +89,6 @@ def create_dataset_dict(dataset_dir: Path) -> DatasetDict:
 
         # Create dataset in smaller chunks to avoid memory overflow
         chunk_size = 1000
-        # chunk_size = 1000
         datasets = []
 
         for i in range(0, len(images), chunk_size):
