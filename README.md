@@ -5,7 +5,11 @@
 # Curia - Open Source
 
 
-This repo is the open source version of Curia by Raidium
+This repo is the open source version of Curia by Raidium.
+
+You can access on huggingface:
+- The Curia model https://huggingface.co/raidium/curia
+- The CuriaBench datasets: https://huggingface.co/datasets/raidium/CuriaBench
 
 ## Training
 
