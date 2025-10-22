@@ -33,7 +33,7 @@ processor = AutoImageProcessor.from_pretrained("raidium/curia", trust_remote_cod
 model = AutoModelForImageClassification.from_pretrained(
     "raidium/curia, subfolder="luna16-3D", trust_remote_code=True, token=os.environ.get("HF_TOKEN")
 )
-dataset: DatasetDict = load_dataset("raidium/CuriaBench", "luna16-3D")  # type: ignore
+dataset: DatasetDict = load_dataset("raidium/CuriaBench", "luna16-3D")
 
 acc = 0
 len_dataset = len(dataset["test"])
