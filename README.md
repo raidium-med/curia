@@ -1,4 +1,9 @@
+<p align="center">
+    <img width="654" height="120" alt="Logo horizontal medium_NOIR" src="https://github.com/user-attachments/assets/74c009ba-cb16-4d78-8e04-70efc2960ee5" />
+</p>
+
 # Curia - Open Source
+
 
 This repo is the open source version of Curia by Raidium
 
