@@ -18,32 +18,16 @@ uv run dinov2/open_source/trainer.py --config dinov2/open_source/configs/luna16-
 Using which ever of the configs you want.
 To train the trainer uses the API of HuggingFace and HuggingFace datasets
 
-## Upload to HuggingFace
-
-To upload $datasets$ to HuggingFace simply run `upload_dataset.py` script
-
-For the $heads$ however, once you train you need to specify:
-
-- the config you used
-- the path to the model you trained
-- the repo name you want to upload to
-Like so:
-
-```bash
-uv run dinov2/open_source/upload_heads_to_hf.py \
---config dinov2/open_source/configs/luna16-3D.yaml \
---model_path results/luna16-3D --repo_name raidium/test-curia
-```
-
 ## Inference
 
-Once you have uploaded your datasets and your head you can do inference like so:
+Curia's pretrained heads are available on huggingface. 
+You can load them and run inference on the benchmark, or on your own datasets.
 
 ```python
-processor = AutoImageProcessor.from_pretrained(repo_id, trust_remote_code=True, token=os.environ.get("HF_TOKEN"))
-backbone = AutoModel.from_pretrained(repo_id, trust_remote_code=True)
+from transformers import AutoImageProcessor, AutoModelForImageClassification
+processor = AutoImageProcessor.from_pretrained("raidium/curia", trust_remote_code=True, token=os.environ.get("HF_TOKEN"))
 model = AutoModelForImageClassification.from_pretrained(
-    repo_id, subfolder="luna16-3D", trust_remote_code=True, token=os.environ.get("HF_TOKEN")
+    "raidium/curia, subfolder="luna16-3D", trust_remote_code=True, token=os.environ.get("HF_TOKEN")
 )
 dataset: DatasetDict = load_dataset("raidium/CuriaBench", "luna16-3D")  # type: ignore
 
