@@ -1,0 +1,6 @@
+transformers>=4.35.0
+SimpleITK>=2.2.1
+numpy
+h5py
+tqdm
+huggingface_hub
